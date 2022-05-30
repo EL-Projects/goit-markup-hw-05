@@ -95,6 +95,9 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -128,6 +131,9 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-list .link.current {
@@ -168,6 +174,9 @@ body {
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: #2196f3;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-button:hover,
 .main-button:focus {
@@ -199,6 +208,30 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.about-item {
+  position: relative;
+}
+.about-overlay-title {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
 /* Masters */
@@ -273,6 +306,9 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contact-adress-link:hover,
 .footer-contact-adress-link:focus {
@@ -286,6 +322,9 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact-link:hover,
@@ -304,6 +343,9 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   background-color: #f5f4fa;
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -315,6 +357,13 @@ body {
 }
 
 /* /* Portfolio photo section */
+
+.portfolio-card-link {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-card-link:hover,
 .portfolio-card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -364,6 +413,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .header-logo {
   padding-top: 24px;
   padding-bottom: 25px;
@@ -379,8 +429,19 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
 }
-
+.current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #2196f3;
+  bottom: 0;
+  height: 4px;
+  border-radius: 2px;
+  justify-content: center;
+  width: 100%;
+}
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -514,8 +575,14 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .masters-social-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--social-icon-color);
 }
 .masters-social-list-link:hover,
@@ -547,9 +614,15 @@ body {
   height: 92px;
   border: solid 1px #afb1b8;
   border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-partners-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--social-icon-color);
 }
 
@@ -607,6 +680,9 @@ body {
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.1)
   );
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon {
   fill: var(--white-color);
